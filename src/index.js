@@ -1,4 +1,5 @@
 import { scores } from './scorelog';
+import './styles.css';
 
 const scorelog = [
   {
