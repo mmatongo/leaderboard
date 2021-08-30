@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
@@ -16,7 +15,8 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scorelog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scorelog */ \"./src/scorelog.js\");\n\n\nconst scorelog = [\n  {\n    name: 'Name',\n    score: 100,\n  },\n  {\n    name: 'Name',\n    score: 20,\n  },\n  {\n    name: 'Name',\n    score: 50,\n  },\n  {\n    name: 'Name',\n    score: 78,\n  },\n  {\n    name: 'Name',\n    score: 125,\n  },\n  {\n    name: 'Name',\n    score: 77,\n  },\n  {\n    name: 'Name',\n    score: 42,\n  },\n];\n\ndocument.addEventListener(\"DOMContentLoaded\", () => (0,_scorelog__WEBPACK_IMPORTED_MODULE_0__.scores)(scorelog));\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scorelog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scorelog */ \"./src/scorelog.js\");\n\n\nconst scorelog = [\n  {\n    name: 'Name',\n    score: 100,\n  },\n  {\n    name: 'Name',\n    score: 20,\n  },\n  {\n    name: 'Name',\n    score: 50,\n  },\n  {\n    name: 'Name',\n    score: 78,\n  },\n  {\n    name: 'Name',\n    score: 125,\n  },\n  {\n    name: 'Name',\n    score: 77,\n  },\n  {\n    name: 'Name',\n    score: 42,\n  },\n];\n\ndocument.addEventListener('DOMContentLoaded', () => (0,_scorelog__WEBPACK_IMPORTED_MODULE_0__.scores)(scorelog));\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
 
 /***/ }),
 
@@ -24,9 +24,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sco
 /*!*************************!*\
   !*** ./src/scorelog.js ***!
   \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, exports) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"scores\": () => (/* binding */ scores)\n/* harmony export */ });\nconst scores = (scorelog) => {\n  const displayScores = document.getElementById('scores');\n\n  scorelog.forEach(\n    (entry) =>\n      displayScores.insertAdjacentHTML(\n        \"beforeend\"\n      )`<div>${entry.name}: ${entry.score}</div>`\n  );\n};\n\n\n\n\n//# sourceURL=webpack://leaderboard/./src/scorelog.js?");
+eval("const scores = (scorelog) => {\n  const displayScores = document.getElementById('scores');\n\n  scorelog.forEach(\n    (entry) => displayScores.insertAdjacentHTML(\n      'beforeend',\n      `\n    <div>${entry.name}: ${entry.score}</div>  \n  `,\n    ),\n  );\n};\n\nexports.scores = scores;\n\n//# sourceURL=webpack://leaderboard/./src/scorelog.js?");
 
 /***/ })
 
@@ -57,23 +57,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
