@@ -1,6 +1,6 @@
-# Todo List
+# Leaderboard
 
-> Todo List repo 
+> Leaderboard repo 
 
 
 ![screenshot](./imgs/screenshot.png)
