@@ -31,4 +31,4 @@ const scorelog = [
   },
 ];
 
-document.addEventListener("DOMContentLoaded", () => scores(scorelog));
+document.addEventListener('DOMContentLoaded', () => scores(scorelog));
