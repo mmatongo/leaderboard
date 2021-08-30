@@ -59,20 +59,20 @@
 }
 
 .box-area {
-    border-style: solid;
-    margin-top: 20px;
+  border-style: solid;
+  margin-top: 20px;
 }
 
 #scores {
-    margin: 10px;
+  margin: 10px;
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: grey;
-    color: white;
-    text-align: center;
- }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
