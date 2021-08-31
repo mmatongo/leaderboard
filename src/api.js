@@ -1,5 +1,5 @@
 const apiLink = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
-const apiEndPoint = 'Zl4d7IVkemOTTVg2fUdz';
+const apiEndPoint = 'DanielsNewApi';
 
 const newGame = async (name) => {
   const getResponse = await fetch(apiLink, {
