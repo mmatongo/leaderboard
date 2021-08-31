@@ -10,18 +10,15 @@ const loadScores = async () => {
 
   const userData = await pullData();
 
-  userData.result.forEach(
-    (entry) => displayScores.insertAdjacentHTML(
-      'beforeend',
-      `
+  userData.result.forEach((entry) => displayScores.insertAdjacentHTML('beforeend', `
     <div>${entry.user}: ${entry.score}</div>  
-  `,
-    ),
-  );
+  `));
 };
 
-const dataSubmit = document.getElementById('submit');
+const refreshbtn = document.getElementById('refresh-btn');
+refreshbtn.addEventListener('click', loadScores);
 
+const dataSubmit = document.getElementById('submit');
 dataSubmit.addEventListener('click', async () => {
   let username = document.getElementById('username').value;
   let userscore = document.getElementById('user-score').value;
@@ -38,9 +35,6 @@ dataSubmit.addEventListener('click', async () => {
     userscore = '';
   }
 });
-
-const refreshbtn = document.getElementById('refresh-btn');
-refreshbtn.addEventListener('click', loadScores);
 
 document.addEventListener('DOMContentLoaded', () => {
   newGame(`Game created at: ${new Date()}`);
