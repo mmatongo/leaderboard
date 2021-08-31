@@ -1,35 +1,42 @@
-import { scores } from './scorelog';
+import { initUsers, pullData, newGame } from './api';
 import './styles.css';
 
-const scorelog = [
-  {
-    name: 'Name',
-    score: 100,
-  },
-  {
-    name: 'Name',
-    score: 20,
-  },
-  {
-    name: 'Name',
-    score: 50,
-  },
-  {
-    name: 'Name',
-    score: 78,
-  },
-  {
-    name: 'Name',
-    score: 125,
-  },
-  {
-    name: 'Name',
-    score: 77,
-  },
-  {
-    name: 'Name',
-    score: 42,
-  },
-];
+const loadScores = async () => {
+  const displayScores = document.getElementById('scores');
 
-document.addEventListener('DOMContentLoaded', () => scores(scorelog));
+  while (displayScores.firstChild) {
+    displayScores.removeChild(displayScores.firstChild);
+  }
+
+  const userData = await pullData();
+
+  userData.result.forEach((entry) => displayScores.insertAdjacentHTML('beforeend', `
+    <div>${entry.user}: ${entry.score}</div>  
+  `));
+};
+
+const refreshbtn = document.getElementById('refresh-btn');
+refreshbtn.addEventListener('click', loadScores);
+
+const dataSubmit = document.getElementById('submit');
+dataSubmit.addEventListener('click', async () => {
+  let username = document.getElementById('username').value;
+  let userscore = document.getElementById('user-score').value;
+
+  if (username !== '' && userscore !== '') {
+    const data = {
+      user: username,
+      score: userscore,
+    };
+
+    await initUsers(data);
+
+    username = '';
+    userscore = '';
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  newGame(`Game created at: ${new Date()}`);
+  loadScores();
+});
