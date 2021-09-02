@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to right, #000000, #434343);
+  background-image: linear-gradient(to right, #000, #434343);
   color: aliceblue;
 }
 
@@ -27,12 +27,12 @@ body {
   border-radius: 5px;
 }
 
-#scores div:nth-of-type(2n) {
-  background-color: #393939;
+#scores > div {
+  margin: 10px;
 }
 
-#scores>div {
-  margin: 10px;
+#scores div:nth-of-type(2n) {
+  background-color: #393939;
 }
 
 .add-scores h2 {
@@ -94,7 +94,7 @@ button:hover {
   background-color: #000;
 }
 
-@media all and (max-width:30em) {
+@media all and (max-width: 30em) {
   button {
     display: block;
     margin: 0.4em auto;
