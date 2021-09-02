@@ -1,6 +1,6 @@
 # Leaderboard
 
-> Leaderboard repo coded by `dm`
+> Leaderboard repo coded by `dm`.
 
 
 ![screenshot](./imgs/screenshot.png)
