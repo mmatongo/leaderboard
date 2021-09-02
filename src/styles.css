@@ -1,3 +1,8 @@
+body {
+  background-image: linear-gradient(to right, #000, #434343);
+  color: aliceblue;
+}
+
 .container {
   display: flex;
   margin: 20px 30px;
@@ -18,11 +23,16 @@
 
 #scores {
   margin-top: 25px;
-  border: 1px solid black;
+  border: 1px solid aliceblue;
+  border-radius: 5px;
+}
+
+#scores > div {
+  margin: 10px;
 }
 
 #scores div:nth-of-type(2n) {
-  background-color: lightgray;
+  background-color: #393939;
 }
 
 .add-scores h2 {
@@ -46,7 +56,7 @@
 
 .input-scores input[type="submit"] {
   margin-top: 20px;
-  width: 25%;
+  width: 35%;
   align-self: flex-end;
 }
 
@@ -62,4 +72,62 @@ footer {
   background-color: grey;
   color: white;
   text-align: center;
+}
+
+button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #fff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+@media all and (max-width: 30em) {
+  button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+.submit {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #fff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.submit:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .add-score {
+    margin-top: 15px;
+    margin-left: 0;
+  }
 }
