@@ -1,6 +1,6 @@
 # Leaderboard
 
-> Leaderboard repo coded by [`dm`](@mmatongo).
+> Leaderboard repo coded by [`dm`](https://github.com/mmatongo).
 
 
 ![screenshot](./imgs/screenshot.png)
