@@ -1,6 +1,6 @@
-# Todo List
+# Leaderboard
 
-> Todo List repo 
+> Leaderboard repo coded by `dm`
 
 
 ![screenshot](./imgs/screenshot.png)
